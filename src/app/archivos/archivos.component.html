@@ -1,0 +1,30 @@
+
+<div class="cuerpo">
+
+<div>
+    <h1>Incyt compartir archivos</h1>
+<div>
+    <h2>recomendaciones:</h2> 
+    <p>
+        1. subir archivos con nombre sin espacios o caracteres extraños o tildes. <br/>
+        2. mantener un nombre descriptivo.<br/>
+        3. si el archivo que se sube es una nueva version, la version anterior del nombre es reemplazada.<br/>
+        4. si el archivo sube exitosamente, la URL aparecera en el cuadro de abajo <br/>
+    </p>
+</div>
+
+
+<form>
+    <input id="myForm" type="file" name="file" (change)="postMethod($event.target.files)">
+</form>
+
+</div>
+
+
+<div >
+    <h2>URL de archivo</h2>
+    <input type="text" name="retorno"   name="retorno" id="retorno" class="retorno"  [(ngModel)]="retorno">
+    <button onclick="myFunction()">Copiar Texto</button>
+</div>
+</div>
+
