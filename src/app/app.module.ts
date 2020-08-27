@@ -5,11 +5,17 @@ import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ArchivosComponent } from './archivos/archivos.component';
+import { CargandoComponent } from './cargando/cargando.component';
+import { TerminadoComponent } from './terminado/terminado.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArchivosComponent
+    ArchivosComponent,
+    CargandoComponent,
+    TerminadoComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
