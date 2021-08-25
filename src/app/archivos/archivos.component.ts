@@ -25,6 +25,7 @@ export class ArchivosComponent implements OnInit {
   
 
   postMethod(files: FileList) {
+    this._flashMessagesService.show('Cargando Archivo, por favor espere', { cssClass: 'alert-success', timeout: 5000 });
     var fileToUpload = files.item(0); 
     console.log(fileToUpload);
     let formData = new FormData(); 
