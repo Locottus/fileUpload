@@ -1,8 +1,17 @@
-<div class="cuerpo">
+
+<div class="container">
   <div>
+      <!--
+  <div id="mainImage">
+    <img src="https://arcgis-web.url.edu.gt/incyt/api/HashFiles/uploads/3logos.jpg" alt="logos Incyt Url y Vrip">
+  </div>
+<img src="assets/incyt.jpg" alt="logo incyt" class = "rounded mx-auto d-block" >
+-->
+
     
-    <div>
-      <h2>recomendaciones:</h2>
+    <div class ="card">
+      <h1>Servicio para subir archivos INCYT</h1>
+      <h2>Recomendaciones:</h2>
       <p>
         1. subir archivos con nombre sin espacios o caracteres extraños o
         tildes. <br />
@@ -19,7 +28,7 @@
         id="myForm"
         type="file"
         name="file"
-        class="btn btn-primary"
+        class="btn btn-primary btn-block"
         (change)="postMethod($event.target.files)"
       />
     </form>
@@ -32,13 +41,15 @@
       name="retorno"
       name="retorno"
       id="retorno"
-      class="retorno"
+      class="form-control"
       [(ngModel)]="retorno"
     />
-    <button class="btn btn-primary" onclick="copyURL()">Copiar Texto</button>
+    
+    
   </div>
+  <div>
+    <button class="btn btn-primary btn-block" onclick="copyURL()">Copiar Texto</button>
+  </div>
+  
 </div>
 
-<app-cargando></app-cargando>
-<app-error></app-error>
-<app-terminado></app-terminado>

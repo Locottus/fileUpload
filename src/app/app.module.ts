@@ -9,6 +9,10 @@ import { CargandoComponent } from './cargando/cargando.component';
 import { TerminadoComponent } from './terminado/terminado.component';
 import { ErrorComponent } from './error/error.component';
 
+
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +22,7 @@ import { ErrorComponent } from './error/error.component';
     ErrorComponent
   ],
   imports: [
+    FlashMessagesModule.forRoot(),
     BrowserModule,
     HttpClientModule,
     FormsModule
