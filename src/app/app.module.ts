@@ -11,6 +11,7 @@ import { ErrorComponent } from './error/error.component';
 
 
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
     FlashMessagesModule.forRoot(),
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,23 +13,40 @@
       <h1>Servicio para subir archivos INCYT</h1>
       <h2>Recomendaciones:</h2>
       <p>
-        1. subir archivos con nombre sin espacios o caracteres extraños o
-        tildes. <br />
-        2. mantener un nombre descriptivo.<br />
-        3. si el archivo que se sube es una nueva version, la version anterior
+        1. Subir archivos con nombre sin espacios o caracteres extraños o tildes. <br />
+        2. Mantener un nombre descriptivo.<br />
+        3. Si el archivo que se sube es una nueva version, la version anterior
         del nombre es reemplazada.<br />
-        4. si el archivo sube exitosamente, la URL aparecera en el cuadro de
-        abajo <br />
-        5. solo puede subir archivos no mayores a 100Mb
+        4. Si el archivo sube exitosamente, la URL aparecera en el cuadro de abajo <br />
+        5. Solo puede subir archivos menores a 100Mb <br/>
+        6. Solicite la palabra secreta para poder subir sus archivos <br/>
       </p>
     </div>
-
+  
+    <br/>
+    <hr>
+    <div>
+      <h4>Ingrese Palabra Secreta</h4>
+      <input
+        type="password"
+        name="secreto"
+        id="secreto"
+        (input)="onSearchChange($event.target.value)"
+        [(ngModel)]="secretHTML"
+      />
+      
+    </div>
+    
+    <hr>
+    <br/>
+    
     <form>
       <input
         id="myForm"
         type="file"
         name="file"
         class="btn btn-primary btn-block"
+        hidden = ""
         (change)="postMethod($event.target.files)"
       />
     </form>
@@ -45,8 +62,6 @@
       class="form-control"
       [(ngModel)]="retorno"
     />
-    
-    
   </div>
   <div>
     <button class="btn btn-primary btn-block" onclick="copyURL()">Copiar Texto</button>
