@@ -34,7 +34,16 @@
         (input)="onSearchChange($event.target.value)"
         [(ngModel)]="secretHTML"
       />
+
+      <div id="dia" *ngIf="!secret">
+        <fa-icon [icon]='faban' class="fas  fa-3x" style="color:red"> </fa-icon> <br>
+      </div>
+
+      <div id="dia" *ngIf="secret">
+        <fa-icon [icon]='facheckcircle' class="fas  fa-3x" style="color:green"> </fa-icon> <br>
+      </div>
       
+
     </div>
     
     <hr>

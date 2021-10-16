@@ -5,6 +5,10 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { SecretwordService } from '../services/secretword.service';
 
+
+import { faBan,faCheckCircle} from '@fortawesome/free-solid-svg-icons';
+
+
 @Component({
   selector: 'app-archivos',
   templateUrl: './archivos.component.html',
@@ -18,6 +22,10 @@ export class ArchivosComponent implements OnInit {
   secret = false;
   secretHTML="";
   secretService = "";
+
+  faban = faBan;
+  facheckcircle = faCheckCircle;
+
 
   constructor(
     private sc:SecretwordService,
@@ -40,7 +48,7 @@ export class ArchivosComponent implements OnInit {
 
     if (this.secretHTML === this.secretService)
       {
-        this._flashMessagesService.show('Palabra Secreta Correcta', { cssClass: 'alert-success', timeout: 10000 });
+        //this._flashMessagesService.show('Palabra Secreta Correcta', { cssClass: 'alert-success', timeout: 5000 });
         this.secret = true;
         //console.log(this.secret);
 
