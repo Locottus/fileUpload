@@ -49,16 +49,22 @@
     <hr>
     <br/>
     
+
     <form>
+
+      <!--<div id="dia" *ngIf="secret"> </div> -->
+
+
       <input
-        id="myForm"
-        type="file"
-        name="file"
-        class="btn btn-primary btn-block"
-        hidden = ""
-        [disabled] = 'secret'
-        (change)="postMethod($event.target.files)"
-      />
+      id="myForm"
+      type="file"
+      name="file"
+      class="btn btn-primary btn-block"
+      hidden = ""
+      [disabled] = "!secret"
+      (change)="postMethod($event.target.files)"
+    />
+
     </form>
   </div>
 
